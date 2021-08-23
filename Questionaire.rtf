@@ -1,0 +1,105 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+<title>Page Title</title>\
+</head>\
+<body>\
+\
+<h1>Questionnaire</h1>\
+<br>\
+<div>\
+            <label for="selectcountry">Select Country:</label>\
+            <select id="country" >\
+                <option></option>\
+                <option>Australia</option>\
+                <option>Overseas</option>\
+               \
+            </select>\
+        </div>\
+<br>\
+<div>\
+            <label for="gender">Gender:</label>\
+            <select id="gender" >\
+                <option></option>\
+                <option>Female</option>\
+                <option>Male</option>\
+                <option>Other</option>\
+            </select>\
+        </div>\
+<br>\
+<form>\
+    <div class="nativeDatePicker">\
+      <label for="bday">Enter your Birthday:</label>\
+      <input type="date" id="bday" name="bday">\
+      <span class="validity"></span>\
+    </div>\
+  \
+<br>\
+Have you had any symptoms in the past week (tick all that apply)\
+<html>\
+<head>\
+\
+<title>\
+</title>    \
+\
+<script>        \
+function static_num() \
+\{            \
+    document.getElementById("btnOperate").onclick = function () \{                \
+        var arr = new Array();                \
+        var items = document.getElementsByName("symptom");                 \
+        for (i = 0; i < items.length; i++) \{                    \
+            if (items[i].checked) \{                        \
+                arr.push(items[i].value);                    \
+            \}                \
+        \}                 \
+        alert("The number of your choice is
+\f1 \'a3\'ba
+\f0 " + arr.length);            \
+    \};        \
+\};    \
+</script>\
+</head>\
+\
+\
+<body>    \
+    <p><input type="checkbox" name="symptom" value="Fever" />Fever </p>   \
+    <p><input type="checkbox" name="symptom" value="Tiredness" />Tiredness</p>\
+    <p><input type="checkbox" name="symptom" value="Sore throat" />Sore throat</p>    \
+    <p><input type="checkbox" name="symptom" value="Difficulty breathing" />Difficulty breathing</p>    \
+    <p><input type="checkbox" name="symptom" value="Persistent pain or pressure in the chest" />Persistent pain or pressure in the chest</p>    \
+    <p><input type="checkbox" name="symptom" value="Diarrhea" />Diarrhea</p>    \
+    <p><input type="checkbox" name="symptom" value="Cough" />Cough</p>    \
+\
+    <p><input id="btnOperate" type="button" value="Choose" onclick="static_num()" /></p>\
+\
+</body>\
+</html>\
+\
+<br>\
+\
+<p>Have you had contact with a confirmed COVID-19 positive person in the last 14 days?</p>\
+\
+<div>\
+  <input type="radio" id="yes" name="contact" value="Yes">\
+         \
+  <label for="Yes">Yes</label>\
+</div>\
+\
+<div>\
+  <input type="radio" id="no" name="contact" value="No">\
+  <label for="No">No</label>\
+</div>\
+<br>\
+<input type="submit">\
+<br>\
+\
+\
+}
